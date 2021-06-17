@@ -1,0 +1,158 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 32674 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Editor\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Projects/TSB/NetcodeTest/SandboxNetcodeTest
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+1070
+Successfully changed project path to: D:/Projects/TSB/NetcodeTest/SandboxNetcodeTest
+D:/Projects/TSB/NetcodeTest/SandboxNetcodeTest
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 131.10 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Projects/TSB/NetcodeTest/SandboxNetcodeTest/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1080 Ti (ID=0x1b06)
+    Vendor:   
+    VRAM:     11127 MB
+    Driver:   27.21.14.6627
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Editor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004301 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 140.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.464 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.021501 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 112.86 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+TypeManager.Initialize took: 172ms
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.361 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5775 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 230.8 MB.
+System memory in use after: 231.3 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 6203.
+Total: 4.899100 ms (FindLiveObjects: 0.489600 ms CreateObjectMapping: 0.159200 ms MarkObjects: 4.181500 ms  DeleteObjects: 0.067700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/SceneDependencyCache/1e962eb1ad0949ebc1c689569a3ad227.sceneWithBuildSettings
+  artifactKey: Guid(1e962eb1ad0949ebc1c689569a3ad227) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
+Start importing Assets/SceneDependencyCache/1e962eb1ad0949ebc1c689569a3ad227.sceneWithBuildSettings using Guid(1e962eb1ad0949ebc1c689569a3ad227) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/Scenes/NetCubeClientServer.unity additively'
+Loaded scene 'Assets/Scenes/NetCubeClientServer.unity'
+	Deserialize:            4.307 ms
+	Integration:            1.759 ms
+	Integration of assets:  2.047 ms
+	Thread Wait Time:       22.247 ms
+	Total Operation Time:   30.360 ms
+ -> (artifact id: '715208da1d148b1bdd70de2e1fc4f8ef') in 0.743665 seconds
+  Import took 0.752402 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 7.89 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 120.8 MB.
+System memory in use after: 121.3 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 6206.
+Total: 5.170200 ms (FindLiveObjects: 0.508600 ms CreateObjectMapping: 0.158400 ms MarkObjects: 4.475000 ms  DeleteObjects: 0.027100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 443.671538 seconds.
+  path: Assets/SceneDependencyCache/a5a3b32eeee6331048b5798c4aea6477.sceneWithBuildSettings
+  artifactKey: Guid(a5a3b32eeee6331048b5798c4aea6477) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
+Start importing Assets/SceneDependencyCache/a5a3b32eeee6331048b5798c4aea6477.sceneWithBuildSettings using Guid(a5a3b32eeee6331048b5798c4aea6477) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/Scenes/NetCubeClientServer.unity additively'
+Loaded scene 'Assets/Scenes/NetCubeClientServer.unity'
+	Deserialize:            1.077 ms
+	Integration:            0.397 ms
+	Integration of assets:  0.164 ms
+	Thread Wait Time:       37.282 ms
+	Total Operation Time:   38.920 ms
+ -> (artifact id: 'f2091d6b5569f8546ab32c4f24a68e19') in 0.199471 seconds
+  Import took 0.208639 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 7.03 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 123.3 MB.
+System memory in use after: 123.7 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 6206.
+Total: 5.635900 ms (FindLiveObjects: 0.483800 ms CreateObjectMapping: 0.182500 ms MarkObjects: 4.933600 ms  DeleteObjects: 0.035000 ms)
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 6.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 123.3 MB.
+System memory in use after: 123.7 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 6206.
+Total: 8.155800 ms (FindLiveObjects: 0.736500 ms CreateObjectMapping: 0.363600 ms MarkObjects: 7.028200 ms  DeleteObjects: 0.026200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 511.527693 seconds.
+  path: Assets/SceneDependencyCache/baf381b260122d180f354002412cb911.sceneWithBuildSettings
+  artifactKey: Guid(baf381b260122d180f354002412cb911) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
+Start importing Assets/SceneDependencyCache/baf381b260122d180f354002412cb911.sceneWithBuildSettings using Guid(baf381b260122d180f354002412cb911) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/Scenes/NetCubeClientServer.unity additively'
+Loaded scene 'Assets/Scenes/NetCubeClientServer.unity'
+	Deserialize:            1.000 ms
+	Integration:            0.592 ms
+	Integration of assets:  0.098 ms
+	Thread Wait Time:       34.021 ms
+	Total Operation Time:   35.711 ms
+ -> (artifact id: '9b20340873b07aee959a1caba216d2ea') in 0.090437 seconds
+  Import took 0.100367 seconds .
+
