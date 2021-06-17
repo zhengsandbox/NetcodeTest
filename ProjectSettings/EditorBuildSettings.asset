@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/NetCube.unity
+    guid: 537c6cd4b017bde4e84db667d9eaa068
+  - enabled: 1
+    path: Assets/Scenes/NetCubeClientServer.unity
+    guid: 6e0d795f464836443985e0249fb85af3
   m_configObjects: {}
