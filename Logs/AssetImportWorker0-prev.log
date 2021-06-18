@@ -15,11 +15,11 @@ D:/Projects/TSB/NetcodeTest/SandboxNetcodeTest
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-3818
+1056
 Successfully changed project path to: D:/Projects/TSB/NetcodeTest/SandboxNetcodeTest
 D:/Projects/TSB/NetcodeTest/SandboxNetcodeTest
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 110.61 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 110.78 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -36,223 +36,167 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56940
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56672
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002201 seconds.
+Registered in 0.002756 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 103.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 110.78 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.324 seconds
+- Completed reload, in  1.268 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.012007 seconds.
+Registered in 0.012526 seconds.
 Begin MonoManager ReloadAssembly
-Unloading broken assembly Library/ScriptAssemblies/NetCube.Generated.dll, this assembly can cause crashes in the runtime
-
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 118.16 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 115.94 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-System.Reflection.ReflectionTypeLoadException: Exception of type 'System.Reflection.ReflectionTypeLoadException' was thrown.
-  at (wrapper managed-to-native) System.Reflection.Assembly.GetTypes(System.Reflection.Assembly,bool)
-  at System.Reflection.Assembly.GetTypes () [0x00000] in <9577ac7a62ef43179789031239ba8798>:0 
-  at Unity.Entities.TypeManager.InitializeAllComponentTypes () [0x000bb] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities\Types\TypeManager.cs:964 
-  at Unity.Entities.TypeManager.Initialize () [0x00100] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities\Types\TypeManager.cs:476 
-  at Unity.Entities.AttachToEntityClonerInjection.Initialize () [0x00000] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:28 
-  at Unity.Entities.AttachToEntityClonerInjection..cctor () [0x00000] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities.Hybrid\Injection\CompanionGameObject.cs:22 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
+TypeManager.Initialize took: 177ms
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-ReflectionTypeLoadException: Exception of type 'System.Reflection.ReflectionTypeLoadException' was thrown.
-  at (wrapper managed-to-native) System.Reflection.Assembly.GetTypes(System.Reflection.Assembly,bool)
-  at System.Reflection.Assembly.GetExportedTypes () [0x00000] in <9577ac7a62ef43179789031239ba8798>:0 
-  at Unity.NetCode.GhostAuthoringModifiers.InitVariantCache () [0x00049] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.netcode@0.6.0-preview.7\Runtime\Authoring\Hybrid\GhostAuthoringModifiers.cs:97 
-  at Unity.NetCode.GhostAuthoringModifiers..cctor () [0x00005] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.netcode@0.6.0-preview.7\Runtime\Authoring\Hybrid\GhostAuthoringModifiers.cs:43 
-Rethrow as TypeInitializationException: The type initializer for 'Unity.NetCode.GhostAuthoringModifiers' threw an exception.
-  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
-  at Unity.NetCode.Editor.GhostCompiler.GhostAssemblyProvider.WillProcess (UnityEditor.Compilation.Assembly editorAssembly) [0x00014] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.netcode@0.6.0-preview.7\Editor\GhostCompiler\GhostCompilerProviders.cs:44 
-  at (wrapper unbox) Unity.NetCode.Editor.GhostCompiler.GhostAssemblyProvider.WillProcess(UnityEditor.Compilation.Assembly)
-  at System.Linq.Enumerable+WhereArrayIterator`1[TSource].ToArray () [0x00022] in <351e49e2a5bf4fd6beabb458ce2255f3>:0 
-  at System.Linq.Enumerable.ToArray[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x0001f] in <351e49e2a5bf4fd6beabb458ce2255f3>:0 
-  at Unity.NetCode.Editor.GhostCompiler.GhostCompiler.Generate (System.Collections.Generic.IEnumerable`1[T] assemblyEnumerable, Unity.NetCode.Editor.GhostCompiler.GhostCompilerOptions options) [0x00018] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.netcode@0.6.0-preview.7\Editor\GhostCompiler\GhostCompiler.cs:63 
-  at Unity.NetCode.Editor.GhostCompiler.GhostCompilerService.CompileAssemblies (System.Collections.Generic.IEnumerable`1[T] assemblies, System.Collections.Generic.List`1[T] excludeTypes) [0x00011] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.netcode@0.6.0-preview.7\Editor\GhostCompiler\GhostCompilerService.cs:472 
-  at Unity.NetCode.Editor.GhostCompiler.GhostCompilerService.RegenerateAll () [0x00028] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.netcode@0.6.0-preview.7\Editor\GhostCompiler\GhostCompilerService.cs:300 
-  at Unity.NetCode.Editor.GhostCompiler.GhostCompilerService.DomainReload () [0x0000f] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.netcode@0.6.0-preview.7\Editor\GhostCompiler\GhostCompilerService.cs:280 
-  at UnityEditor.AssemblyReloadEvents.OnAfterAssemblyReload () [0x0000d] in <1e441e8684a14fe4b8f8a926d91afc3a>:0 
-
-- Completed reload, in  5.062 seconds
+- Completed reload, in  2.196 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5768 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 230.6 MB.
-System memory in use after: 231.1 MB.
-
-Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 6196.
-Total: 4.066900 ms (FindLiveObjects: 0.472600 ms CreateObjectMapping: 0.181000 ms MarkObjects: 3.348800 ms  DeleteObjects: 0.063400 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/SceneDependencyCache/1e962eb1ad0949ebc1c689569a3ad227.sceneWithBuildSettings
-  artifactKey: Guid(1e962eb1ad0949ebc1c689569a3ad227) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
-Start importing Assets/SceneDependencyCache/1e962eb1ad0949ebc1c689569a3ad227.sceneWithBuildSettings using Guid(1e962eb1ad0949ebc1c689569a3ad227) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/Scenes/NetCubeClientServer.unity additively'
-Loaded scene 'Assets/Scenes/NetCubeClientServer.unity'
-	Deserialize:            1.723 ms
-	Integration:            2.709 ms
-	Integration of assets:  0.005 ms
-	Thread Wait Time:       34.069 ms
-	Total Operation Time:   38.506 ms
-Exception thrown during SubScene import: System.ArgumentException: Unknown Type:`Unity.Entities.LinkedEntityGroup` All ComponentType must be known at compile time. For generic components, each concrete type must be registered with [RegisterGenericComponentType].
-  at Unity.Entities.TypeManager.ManagedException (System.Type type) [0x0001d] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities\Types\TypeManager.cs:632 
-  at Unity.Entities.TypeManager.ManagedException[T] () [0x00000] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities\Types\TypeManager.cs:613 
-  at Unity.Entities.TypeManager.GetTypeIndex[T] () [0x0000f] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities\Types\TypeManager.cs:641 
-  at Unity.Entities.EntityComponentStore.Create (Unity.Entities.EntityComponentStore* entities, System.UInt64 startChunkSequenceNumber, System.Int32 newCapacity) [0x000ba] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities\EntityComponentStore.cs:432 
-  at Unity.Entities.EntityDataAccess.Initialize (Unity.Entities.EntityDataAccess* self, Unity.Entities.World world) [0x0005c] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities\EntityDataAccess.cs:191 
-  at Unity.Entities.EntityManager.Initialize (Unity.Entities.World world) [0x00094] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities\EntityManager.cs:213 
-  at Unity.Entities.WorldUnmanaged.Create (Unity.Entities.World world, Unity.Entities.WorldFlags flags) [0x00056] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities\WorldUnmanaged.cs:504 
-  at Unity.Entities.World..ctor (System.String name, Unity.Entities.WorldFlags flags) [0x0001c] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Entities\World.cs:133 
-  at Unity.Scenes.Editor.EditorEntityScenes.ConvertAndWriteEntityScene (UnityEngine.SceneManagement.Scene scene, Unity.Entities.GameObjectConversionSettings settings, System.Collections.Generic.List`1[T] sectionRefObjs, Unity.Scenes.Editor.WriteEntitySceneSettings writeEntitySettings) [0x00022] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Scenes.Editor\EditorEntityScenes.cs:134 
-  at Unity.Scenes.Editor.SubSceneImporter.OnImportAsset (UnityEditor.AssetImporters.AssetImportContext ctx) [0x00173] in D:\Projects\TSB\NetcodeTest\SandboxNetcodeTest\Library\PackageCache\com.unity.entities@0.17.0-preview.41\Unity.Scenes.Editor\SubSceneImporter.cs:144 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-Unity.Debug:Log (object) (at Library/PackageCache/com.unity.entities@0.17.0-preview.41/Unity.Entities/Stubs/Unity/Debug.cs:17)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset (UnityEditor.AssetImporters.AssetImportContext) (at Library/PackageCache/com.unity.entities@0.17.0-preview.41/Unity.Scenes.Editor/SubSceneImporter.cs:160)
-UnityEditor.AssetImporters.ScriptedImporter:GenerateAssetData (UnityEditor.AssetImporters.AssetImportContext)
-
-(Filename: Library/PackageCache/com.unity.entities@0.17.0-preview.41/Unity.Entities/Stubs/Unity/Debug.cs Line: 17)
-
- -> (artifact id: '21978c5d0d2dfa3152ce20f34ecb4e44') in 0.369481 seconds
-  Import took 0.380919 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012474 seconds.
-Begin MonoManager ReloadAssembly
-The Handle has already been released.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle:Release (Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
-Unity.Entities.TypeManager:ShutdownSharedStatics () (at Library/PackageCache/com.unity.entities@0.17.0-preview.41/Unity.Entities/Types/TypeManager.cs:506)
-Unity.Entities.TypeManager:Shutdown () (at Library/PackageCache/com.unity.entities@0.17.0-preview.41/Unity.Entities/Types/TypeManager.cs:577)
-Unity.Entities.TypeManager/<>c:<Initialize>b__67_0 (object,System.EventArgs) (at Library/PackageCache/com.unity.entities@0.17.0-preview.41/Unity.Entities/Types/TypeManager.cs:447)
-System.AppDomain:DoDomainUnload ()
-
-[Library/PackageCache/com.unity.entities@0.17.0-preview.41/Unity.Entities/Types/TypeManager.cs line 506]
-
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-TypeManager.Initialize took: 190ms
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.868 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5668 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 230.4 MB.
-System memory in use after: 230.9 MB.
-
-Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 6201.
-Total: 5.416300 ms (FindLiveObjects: 0.510300 ms CreateObjectMapping: 0.180900 ms MarkObjects: 4.690300 ms  DeleteObjects: 0.033600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012486 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-TypeManager.Initialize took: 169ms
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.823 seconds
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(f9d3585475a6a4e73befe5a55db54c99) path("Assets/NetCodeGenerated/NetCube.Generated/CubeInputCommandSerializer.cs") state(2)
-Script is not up to date after domain reload: guid(89ced7e1df42e476f998c12c91d1b018) path("Assets/NetCodeGenerated/NetCube.Generated/GhostComponentSerializerCollection.cs") state(2)
-Script is not up to date after domain reload: guid(04abdc19fd85e45f19b31fd340548a42) path("Assets/NetCodeGenerated/NetCube.Generated/GoInGameRequestCommandSerializer.cs") state(2)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5672 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5795 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 231.6 MB.
 System memory in use after: 232.0 MB.
 
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 6212.
-Total: 5.412500 ms (FindLiveObjects: 0.534900 ms CreateObjectMapping: 0.201500 ms MarkObjects: 4.646300 ms  DeleteObjects: 0.028900 ms)
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 6224.
+Total: 5.365200 ms (FindLiveObjects: 0.483200 ms CreateObjectMapping: 0.173700 ms MarkObjects: 4.634000 ms  DeleteObjects: 0.073400 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/SceneDependencyCache/baf381b260122d180f354002412cb911.sceneWithBuildSettings
+  artifactKey: Guid(baf381b260122d180f354002412cb911) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
+Start importing Assets/SceneDependencyCache/baf381b260122d180f354002412cb911.sceneWithBuildSettings using Guid(baf381b260122d180f354002412cb911) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/Scenes/NetCubeClientServer.unity additively'
+Loaded scene 'Assets/Scenes/NetCubeClientServer.unity'
+	Deserialize:            4.421 ms
+	Integration:            1.727 ms
+	Integration of assets:  1.894 ms
+	Thread Wait Time:       21.570 ms
+	Total Operation Time:   29.612 ms
+ -> (artifact id: 'e76f1493244d0aaee85d41247798ab83') in 0.816558 seconds
+  Import took 0.825396 seconds .
 
 ========================================================================
 Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011489 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-TypeManager.Initialize took: 170ms
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.783 seconds
-Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 7.28 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5675 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 231.7 MB.
-System memory in use after: 232.2 MB.
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.9 MB.
 
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 6222.
-Total: 5.434000 ms (FindLiveObjects: 0.496400 ms CreateObjectMapping: 0.188600 ms MarkObjects: 4.720300 ms  DeleteObjects: 0.027500 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 6227.
+Total: 6.817100 ms (FindLiveObjects: 0.884300 ms CreateObjectMapping: 0.223900 ms MarkObjects: 5.677000 ms  DeleteObjects: 0.030200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 877.526964 seconds.
+  path: Assets/Win64CppClientBuild.buildconfiguration
+  artifactKey: Guid(6d530ca29efc18f4982042714606bfcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Win64CppClientBuild.buildconfiguration using Guid(6d530ca29efc18f4982042714606bfcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c40650d4bdffb45be9c9d038516f4b07') in 0.020705 seconds
+  Import took 0.029332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000577 seconds.
+  path: Assets/Win64CppClientBuild.buildconfiguration
+  artifactKey: Guid(6d530ca29efc18f4982042714606bfcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Win64CppClientBuild.buildconfiguration using Guid(6d530ca29efc18f4982042714606bfcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c40650d4bdffb45be9c9d038516f4b07') in 0.004644 seconds
+  Import took 0.012816 seconds .
 
 ========================================================================
 Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011707 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-TypeManager.Initialize took: 172ms
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.795 seconds
-Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 7.54 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5675 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 231.7 MB.
-System memory in use after: 232.2 MB.
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 122.7 MB.
+System memory in use after: 123.2 MB.
 
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 6229.
-Total: 5.133800 ms (FindLiveObjects: 0.498100 ms CreateObjectMapping: 0.178600 ms MarkObjects: 4.427400 ms  DeleteObjects: 0.028500 ms)
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 6227.
+Total: 6.180700 ms (FindLiveObjects: 0.652800 ms CreateObjectMapping: 0.202800 ms MarkObjects: 5.300700 ms  DeleteObjects: 0.023300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 208.490374 seconds.
+  path: Assets/SceneDependencyCache/baf381b260122d180f354002412cb911.sceneWithBuildSettings
+  artifactKey: Guid(baf381b260122d180f354002412cb911) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
+Start importing Assets/SceneDependencyCache/baf381b260122d180f354002412cb911.sceneWithBuildSettings using Guid(baf381b260122d180f354002412cb911) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/Scenes/NetCubeClientServer.unity additively'
+Loaded scene 'Assets/Scenes/NetCubeClientServer.unity'
+	Deserialize:            1.140 ms
+	Integration:            0.446 ms
+	Integration of assets:  0.104 ms
+	Thread Wait Time:       33.397 ms
+	Total Operation Time:   35.087 ms
+ -> (artifact id: '091c33023a0fba47cfe1981b7fd138df') in 0.077710 seconds
+  Import took 0.086572 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 7.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 123.8 MB.
+System memory in use after: 124.2 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 6227.
+Total: 7.551700 ms (FindLiveObjects: 0.501900 ms CreateObjectMapping: 0.149200 ms MarkObjects: 6.848600 ms  DeleteObjects: 0.050100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 137.213495 seconds.
+  path: Assets/SceneDependencyCache/a5a3b32eeee6331048b5798c4aea6477.sceneWithBuildSettings
+  artifactKey: Guid(a5a3b32eeee6331048b5798c4aea6477) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
+Start importing Assets/SceneDependencyCache/a5a3b32eeee6331048b5798c4aea6477.sceneWithBuildSettings using Guid(a5a3b32eeee6331048b5798c4aea6477) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/Scenes/NetCubeClientServer.unity additively'
+Loaded scene 'Assets/Scenes/NetCubeClientServer.unity'
+	Deserialize:            1.046 ms
+	Integration:            0.784 ms
+	Integration of assets:  0.090 ms
+	Thread Wait Time:       34.757 ms
+	Total Operation Time:   36.677 ms
+ -> (artifact id: 'cdd3b431c03df95b1641648a35d093b2') in 0.080191 seconds
+  Import took 0.088831 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 8.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 123.8 MB.
+System memory in use after: 124.2 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 6227.
+Total: 5.962200 ms (FindLiveObjects: 0.487400 ms CreateObjectMapping: 0.139500 ms MarkObjects: 5.303500 ms  DeleteObjects: 0.030400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 798.019920 seconds.
+  path: Assets/SceneDependencyCache/67e28388f450d11d661d70ed5dcf48c8.sceneWithBuildSettings
+  artifactKey: Guid(67e28388f450d11d661d70ed5dcf48c8) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
+Start importing Assets/SceneDependencyCache/67e28388f450d11d661d70ed5dcf48c8.sceneWithBuildSettings using Guid(67e28388f450d11d661d70ed5dcf48c8) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/Scenes/NetCubeClientServer.unity additively'
+Loaded scene 'Assets/Scenes/NetCubeClientServer.unity'
+	Deserialize:            0.957 ms
+	Integration:            0.500 ms
+	Integration of assets:  0.075 ms
+	Thread Wait Time:       38.292 ms
+	Total Operation Time:   39.825 ms
+ -> (artifact id: '09a65b6dd3a4ea7cb3a3666368f811ba') in 0.080551 seconds
+  Import took 0.088910 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
