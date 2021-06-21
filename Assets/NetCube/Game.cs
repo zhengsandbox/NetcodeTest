@@ -114,6 +114,11 @@ public class GoInGameServerSystem : SystemBase
 
         var commandBuffer = new EntityCommandBuffer(Allocator.Temp);
         var networkIdFromEntity = GetComponentDataFromEntity<NetworkIdComponent>(true);
+        
+        var g1 = new SandboxGuid(Guid.NewGuid().ToByteArray());
+        var g2 = new SandboxGuid(Guid.NewGuid().ToByteArray());
+        Debug.Log($"<color=cyan>CREATED GHOST ASSET FOR PLAYER on the server {g1.GetHashCode()} and {g2.GetHashCode()}</color>");
+        
         Entities.WithReadOnly(networkIdFromEntity).ForEach((Entity reqEnt, in GoInGameRequest req, in ReceiveRpcCommandRequestComponent reqSrc) =>
         {
             commandBuffer.AddComponent<NetworkStreamInGame>(reqSrc.SourceConnection);
@@ -125,9 +130,6 @@ public class GoInGameServerSystem : SystemBase
             commandBuffer.AddBuffer<CubeInput>(player);
             commandBuffer.SetComponent(reqSrc.SourceConnection, new CommandTargetComponent {targetEntity = player});
 
-            var g1 = Guid.NewGuid();
-            var g2 = Guid.NewGuid();
-            Debug.Log($"<color=cyan>CREATED GHOST ASSET FOR PLAYER on the server {g1.GetHashCode()} and {g2.GetHashCode()}</color>");
             commandBuffer.SetComponent(player, new GhostAsset() { assetIdGUID = g1, userIdGUID = g2, isAvatar = true });
 
             commandBuffer.DestroyEntity(reqEnt);

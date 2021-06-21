@@ -1,0 +1,22 @@
+{
+    "name": "TSBNetcodeTypes.NetCodeGen",
+    "rootNamespace": "",
+    "references": [
+        "Unity.NetCode.Editor",
+        "Sandbox.Engine.GameEntities.Components",
+        "Unity.NetCode",
+        "NetCube",
+        "Unity.NetCode.Authoring.Hybrid"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
