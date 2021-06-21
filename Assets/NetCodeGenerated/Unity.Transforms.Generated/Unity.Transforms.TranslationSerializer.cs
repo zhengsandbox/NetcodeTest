@@ -23,13 +23,13 @@ namespace Unity.Transforms.Generated
             {
                 s_State = new GhostComponentSerializer.State
                 {
-                    GhostFieldsHash = 17884505960735121,
+                    GhostFieldsHash = 8484511096828493541,
                     ExcludeFromComponentCollectionHash = 0,
                     ComponentType = ComponentType.ReadWrite<Unity.Transforms.Translation>(),
                     ComponentSize = UnsafeUtility.SizeOf<Unity.Transforms.Translation>(),
                     SnapshotSize = UnsafeUtility.SizeOf<Snapshot>(),
                     ChangeMaskBits = ChangeMaskBits,
-                    SendMask = GhostComponentSerializer.SendMask.Interpolated | GhostComponentSerializer.SendMask.Predicted,
+                    SendMask = GhostComponentSerializer.SendMask.Interpolated,
                     SendToOwner = SendToOwnerType.All,
                     SendForChildEntities = 0,
                     VariantHash = 0,
@@ -75,9 +75,9 @@ namespace Unity.Transforms.Generated
                 ref var snapshot = ref GhostComponentSerializer.TypeCast<Snapshot>(snapshotData, snapshotOffset + snapshotStride*i);
                 ref var component = ref GhostComponentSerializer.TypeCast<Unity.Transforms.Translation>(componentData, componentStride*i);
                 ref var serializerState = ref GhostComponentSerializer.TypeCast<GhostSerializerState>(stateData, 0);
-                snapshot.Value_x = (int) math.round(component.Value.x * 100);
-                snapshot.Value_y = (int) math.round(component.Value.y * 100);
-                snapshot.Value_z = (int) math.round(component.Value.z * 100);
+                snapshot.Value_x = (int) math.round(component.Value.x * 1000);
+                snapshot.Value_y = (int) math.round(component.Value.y * 1000);
+                snapshot.Value_z = (int) math.round(component.Value.z * 1000);
             }
         }
         [BurstCompile]
@@ -103,9 +103,9 @@ namespace Unity.Transforms.Generated
                 float snapshotInterpolationFactorRaw = snapshotInterpolationData.InterpolationFactor;
                 float snapshotInterpolationFactor = snapshotInterpolationFactorRaw;
                 ref var component = ref GhostComponentSerializer.TypeCast<Unity.Transforms.Translation>(componentData, componentStride*i);
-                snapshotInterpolationFactor = snapshotInterpolationFactorRaw;
-                var Value_Before = new float3(snapshotBefore.Value_x * 0.01f, snapshotBefore.Value_y * 0.01f, snapshotBefore.Value_z * 0.01f);
-                var Value_After = new float3(snapshotAfter.Value_x * 0.01f, snapshotAfter.Value_y * 0.01f, snapshotAfter.Value_z * 0.01f);
+                snapshotInterpolationFactor = math.max(snapshotInterpolationFactorRaw, 0);
+                var Value_Before = new float3(snapshotBefore.Value_x * 0.001f, snapshotBefore.Value_y * 0.001f, snapshotBefore.Value_z * 0.001f);
+                var Value_After = new float3(snapshotAfter.Value_x * 0.001f, snapshotAfter.Value_y * 0.001f, snapshotAfter.Value_z * 0.001f);
                 component.Value = math.lerp(Value_Before, Value_After, snapshotInterpolationFactor);
 
             }

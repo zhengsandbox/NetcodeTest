@@ -29,7 +29,7 @@ namespace Unity.Transforms.Generated
                     ComponentSize = UnsafeUtility.SizeOf<Unity.Transforms.Rotation>(),
                     SnapshotSize = UnsafeUtility.SizeOf<Snapshot>(),
                     ChangeMaskBits = ChangeMaskBits,
-                    SendMask = GhostComponentSerializer.SendMask.Interpolated | GhostComponentSerializer.SendMask.Predicted,
+                    SendMask = GhostComponentSerializer.SendMask.Interpolated,
                     SendToOwner = SendToOwnerType.All,
                     SendForChildEntities = 0,
                     VariantHash = 0,
@@ -105,7 +105,7 @@ namespace Unity.Transforms.Generated
                 float snapshotInterpolationFactorRaw = snapshotInterpolationData.InterpolationFactor;
                 float snapshotInterpolationFactor = snapshotInterpolationFactorRaw;
                 ref var component = ref GhostComponentSerializer.TypeCast<Unity.Transforms.Rotation>(componentData, componentStride*i);
-                snapshotInterpolationFactor = snapshotInterpolationFactorRaw;
+                snapshotInterpolationFactor = math.max(snapshotInterpolationFactorRaw, 0);
                 var Value_Before = math.normalize(new quaternion(snapshotBefore.ValueX * 0.001f, snapshotBefore.ValueY * 0.001f, snapshotBefore.ValueZ * 0.001f, snapshotBefore.ValueW * 0.001f));
                 var Value_After = math.normalize(new quaternion(snapshotAfter.ValueX * 0.001f, snapshotAfter.ValueY * 0.001f, snapshotAfter.ValueZ * 0.001f, snapshotAfter.ValueW * 0.001f));
                 component.Value = math.slerp(Value_Before,

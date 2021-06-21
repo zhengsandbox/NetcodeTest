@@ -23,7 +23,7 @@ namespace NetCube.Generated
             {
                 s_State = new GhostComponentSerializer.State
                 {
-                    GhostFieldsHash = 14767913548786401661,
+                    GhostFieldsHash = 11266163746584454747,
                     ExcludeFromComponentCollectionHash = 0,
                     ComponentType = ComponentType.ReadWrite<GhostAsset>(),
                     ComponentSize = UnsafeUtility.SizeOf<GhostAsset>(),
@@ -61,9 +61,11 @@ namespace NetCube.Generated
         public static GhostComponentSerializer.State State => GetState();
         public struct Snapshot
         {
+            public SandboxGuid userIdGUID;
+            public SandboxGuid assetIdGUID;
             public uint isAvatar;
         }
-        public const int ChangeMaskBits = 1;
+        public const int ChangeMaskBits = 3;
         [BurstCompile]
         [MonoPInvokeCallback(typeof(GhostComponentSerializer.CopyToFromSnapshotDelegate))]
         private static void CopyToSnapshot(IntPtr stateData, IntPtr snapshotData, int snapshotOffset, int snapshotStride, IntPtr componentData, int componentStride, int count)
@@ -73,6 +75,8 @@ namespace NetCube.Generated
                 ref var snapshot = ref GhostComponentSerializer.TypeCast<Snapshot>(snapshotData, snapshotOffset + snapshotStride*i);
                 ref var component = ref GhostComponentSerializer.TypeCast<GhostAsset>(componentData, componentStride*i);
                 ref var serializerState = ref GhostComponentSerializer.TypeCast<GhostSerializerState>(stateData, 0);
+                snapshot.userIdGUID = component.userIdGUID;
+                snapshot.assetIdGUID = component.assetIdGUID;
                 snapshot.isAvatar = component.isAvatar?1u:0;
             }
         }
@@ -99,6 +103,8 @@ namespace NetCube.Generated
                 float snapshotInterpolationFactorRaw = snapshotInterpolationData.InterpolationFactor;
                 float snapshotInterpolationFactor = snapshotInterpolationFactorRaw;
                 ref var component = ref GhostComponentSerializer.TypeCast<GhostAsset>(componentData, componentStride*i);
+                component.userIdGUID = snapshotBefore.userIdGUID;
+                component.assetIdGUID = snapshotBefore.assetIdGUID;
                 component.isAvatar = snapshotBefore.isAvatar != 0;
 
             }
@@ -111,6 +117,8 @@ namespace NetCube.Generated
         {
             ref var component = ref GhostComponentSerializer.TypeCast<GhostAsset>(componentData, 0);
             ref var backup = ref GhostComponentSerializer.TypeCast<GhostAsset>(backupData, 0);
+            component.userIdGUID = backup.userIdGUID;
+            component.assetIdGUID = backup.assetIdGUID;
             component.isAvatar = backup.isAvatar;
         }
 
@@ -130,8 +138,10 @@ namespace NetCube.Generated
             ref var snapshot = ref GhostComponentSerializer.TypeCast<Snapshot>(snapshotData);
             ref var baseline = ref GhostComponentSerializer.TypeCast<Snapshot>(baselineData);
             uint changeMask;
-            changeMask = (snapshot.isAvatar != baseline.isAvatar) ? 1u : 0;
-            GhostComponentSerializer.CopyToChangeMask(bits, changeMask, startOffset, 1);
+            changeMask = snapshot.userIdGUID.Equals(baseline.userIdGUID) ? 0 : 1u;
+            changeMask |= snapshot.assetIdGUID.Equals(baseline.assetIdGUID) ? 0 : (1u << 1);
+            changeMask |= (snapshot.isAvatar != baseline.isAvatar) ? (1u<<2) : 0;
+            GhostComponentSerializer.CopyToChangeMask(bits, changeMask, startOffset, 3);
         }
         [BurstCompile]
         [MonoPInvokeCallback(typeof(GhostComponentSerializer.SerializeDelegate))]
@@ -141,6 +151,10 @@ namespace NetCube.Generated
             ref var baseline = ref GhostComponentSerializer.TypeCast<Snapshot>(baselineData);
             uint changeMask = GhostComponentSerializer.CopyFromChangeMask(changeMaskData, startOffset, ChangeMaskBits);
             if ((changeMask & (1 << 0)) != 0)
+                snapshot.userIdGUID.WriteDataStream(ref writer);
+            if ((changeMask & (1 << 1)) != 0)
+                snapshot.assetIdGUID.WriteDataStream(ref writer);
+            if ((changeMask & (1 << 2)) != 0)
                 writer.WritePackedUIntDelta(snapshot.isAvatar, baseline.isAvatar, compressionModel);
         }
         [BurstCompile]
@@ -151,6 +165,14 @@ namespace NetCube.Generated
             ref var baseline = ref GhostComponentSerializer.TypeCast<Snapshot>(baselineData);
             uint changeMask = GhostComponentSerializer.CopyFromChangeMask(changeMaskData, startOffset, ChangeMaskBits);
             if ((changeMask & (1 << 0)) != 0)
+                snapshot.userIdGUID.ReadDataStream(ref reader);
+            else
+                snapshot.userIdGUID = baseline.userIdGUID;
+            if ((changeMask & (1 << 1)) != 0)
+                snapshot.assetIdGUID.ReadDataStream(ref reader);
+            else
+                snapshot.assetIdGUID = baseline.assetIdGUID;
+            if ((changeMask & (1 << 2)) != 0)
                 snapshot.isAvatar = reader.ReadPackedUIntDelta(baseline.isAvatar, compressionModel);
             else
                 snapshot.isAvatar = baseline.isAvatar;
