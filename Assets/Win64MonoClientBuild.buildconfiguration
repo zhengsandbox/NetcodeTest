@@ -35,12 +35,6 @@
         {
             "$type": "Unity.Build.Common.OutputBuildDirectory, Unity.Build",
             "OutputDirectory": "D:\\Projects\\TSB\\NetcodeTest\\SandboxNetcodeTest\\Builds\\MonoClient"
-        },
-        {
-            "$type": "Unity.Build.Classic.ClassicScriptingSettings, Unity.Build.Classic",
-            "ScriptingBackend": 0,
-            "Il2CppCompilerConfiguration": 1,
-            "UseIncrementalGC": true
         }
     ]
 }
