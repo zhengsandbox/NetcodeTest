@@ -1,3 +1,4 @@
+using System;
 using Unity.Entities;
 using Unity.NetCode;
 using UnityEngine;
@@ -18,18 +19,18 @@ public class CheckGuidIntegritySystem : SystemBase
 		
 		Entities
 			.WithoutBurst()
-			.ForEach((in PredictedGhostComponent prediction, in GhostAsset ghostAsset) =>
+			.ForEach((in PredictedGhostComponent prediction, in GhostAsset ghostAsset, in GameEntityInstanceGUID entityInstance) =>
 		{
 			if (!GhostPredictionSystemGroup.ShouldPredict(tick, prediction))
 				return;
 
 			if (World.GetExistingSystem<ClientSimulationSystemGroup>() != null)
 			{
-				Debug.Log($"<color=green> GhostAssetId: {ghostAsset.assetIdGUID.GetHashCode()} GhostUserId: {ghostAsset.userIdGUID.GetHashCode()} isAvatar: {ghostAsset.isAvatar} </color>");
+				Debug.Log($"<color=green> GhostAssetId: {new Guid(ghostAsset.assetIdGUID.ToByteArray())} GhostUserId: {new Guid(ghostAsset.userIdGUID.ToByteArray())} entityInstance: {new Guid(entityInstance.instanceGUID.ToByteArray())} </color>");
 			}
 			else if (World.GetExistingSystem<ServerSimulationSystemGroup>() != null)
 			{
-				Debug.Log($"<color=red> GhostAssetId: {ghostAsset.assetIdGUID.GetHashCode()} GhostUserId: {ghostAsset.userIdGUID.GetHashCode()} isAvatar: {ghostAsset.isAvatar}</color>");
+				Debug.Log($"<color=red> GhostAssetId: {new Guid(ghostAsset.assetIdGUID.ToByteArray())} GhostUserId: {new Guid(ghostAsset.userIdGUID.ToByteArray())} entityInstance: {new Guid(entityInstance.instanceGUID.ToByteArray())} </color>");
 			}
 			
 		}).Run();
