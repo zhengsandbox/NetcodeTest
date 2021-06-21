@@ -5,6 +5,7 @@ using Unity.NetCode;
 using Unity.Networking.Transport;
 using Unity.Burst;
 using Unity.Collections;
+using UnityEngine;
 
 public struct EnableNetCubeGame : IComponentData
 {}
@@ -123,6 +124,11 @@ public class GoInGameServerSystem : SystemBase
 
             commandBuffer.AddBuffer<CubeInput>(player);
             commandBuffer.SetComponent(reqSrc.SourceConnection, new CommandTargetComponent {targetEntity = player});
+
+            var g1 = Guid.NewGuid();
+            var g2 = Guid.NewGuid();
+            Debug.Log($"<color=cyan>CREATED GHOST ASSET FOR PLAYER on the server {g1.GetHashCode()} and {g2.GetHashCode()}</color>");
+            commandBuffer.SetComponent(player, new GhostAsset() { assetIdGUID = g1, userIdGUID = g2, isAvatar = true });
 
             commandBuffer.DestroyEntity(reqEnt);
         }).Run();
